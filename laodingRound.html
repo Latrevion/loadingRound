@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Title</title>
+  <style>
+    *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .spinner {
+      width: 50px;
+      height: 50px;
+      background-color: deepskyblue;
+      border-radius: 100%;
+      -webkit-animation: scaleOut 1.1s infinite ease-in-out;
+      animation: scaleOut 1.1s infinite ease-in-out;
+    }
+
+    /*@-webkit-keyframes scaleOut {*/
+    /*  0% { -webkit-transform: scale(0) }*/
+    /*  50% {*/
+    /*    -webkit-transform: scale(1.0);*/
+    /*    !*opacity: 0;*!*/
+    /*  }*/
+    /*  100% {*/
+    /*    -webkit-transform: scale(1.5);*/
+    /*    opacity: 0;*/
+    /*  }*/
+    /*}*/
+
+    @keyframes scaleOut {
+      0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      }
+      50% {
+        -webkit-transform: scale(0.8);
+        transform: scale(0.8);
+        /*opacity: 0;*/
+      }
+      100% {
+        -webkit-transform: scale(1.6);
+        transform: scale(1.6);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="spinner"></div>
+</body>
+</html>
